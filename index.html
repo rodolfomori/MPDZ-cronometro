@@ -15,19 +15,49 @@
 <body>
     <img src="./imagem-missao.png">
     <div id="caixa-numeros">
-        <span class="numeros">00</span>
+        <span class="numeros" id="horas">00</span>
         <span class="numeros">:</span>
-        <span class="numeros">00</span>
+        <span class="numeros" id="minutos">00</span>
         <span class="numeros">:</span>
-        <span class="numeros">00</span>
+        <span class="numeros" id="segundos">00</span>
         <span class="numeros">:</span>
-        <span class="numeros numero-verde">00</span>
+        <span class="numeros numero-verde" id="mili">00</span>
     </div>
     <div id="caixa-botoes">
-        <button class="botoes">Start</button>
+        <button class="botoes" id="start">Start</button>
         <button class="botoes">Stop</button>
         <button class="botoes">Reset</button>
     </div>
 </body>
+<script>
+    let btnStart = document.getElementById("start")
+    let mili = document.getElementById("mili")
+    let segundos = document.getElementById("segundos")
+    let minutos = document.getElementById("minutos")
+    let horas = document.getElementById("horas")
+
+
+    let startTimer
+    let ms = 0
+    let seg = 0
+    let min = 0
+    let hr = 0
+
+    function start() {
+        startTimer = setInterval(function () {
+           ms++
+           atualizaValor()
+        }, 10);
+    }
+
+    function atualizaValor(){
+        mili.innerHTML = ms
+    }
+
+
+
+    btnStart.addEventListener("click", start)
+
+</script>
 
 </html>
