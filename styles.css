@@ -23,7 +23,7 @@ img {
     width: 340px;
     background: white;
     border-radius: 6px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .numeros {
@@ -48,4 +48,16 @@ img {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+#reset {
+    color: black;
+}
+
+#stop {
+    color: red;
+}
+
+.ativo {
+    opacity: 0.5;
 }
